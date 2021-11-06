@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const BackEnd_URL = 'https://guardian-discord-bot-backend.herokuapp.com';
+export const BackEnd_URL = 'https://guardian-discord-bot-backend.herokuapp.com:1337';
 export const FrontEnd_URL = 'https://guardian-discord-bot-frontend.herokuapp.com' 
 export const Name = 'Vexer';
 
