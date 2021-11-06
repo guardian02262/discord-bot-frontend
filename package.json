@@ -24,7 +24,8 @@
     "zod": "^3.8.2"
   },
   "scripts": {
-    "start": "craco start",
+    "start": "node server.js",
+    "dev:start": "craco start",
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject"
