@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.loader {
+  border-top-color: #3498db;
+  -webkit-animation: spinner 1.5s linear infinite;
+  animation: spinner 1.5s linear infinite;
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.pzt {
+  height: 65vh;
+  width: 85vh;
+}
+.animate {
+  animation: fadeIn 5s !important;
+  opacity: 0 !important;
+}
+@keyframes fadeIn {
+  0% {
+	  opacity: 0;
+  }
+  25% {
+	  opacity: 1;
+  }
+  100% {
+	  opacity: 0;
+  }
+}
