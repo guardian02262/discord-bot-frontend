@@ -1,16 +1,15 @@
-import axios from "axios";
 import { useState } from "react";
 
 import Loading from "./comp/Loading";
 import NavBar from "./comp/navBar";
-import {BackEnd_URL, FrontEnd_URL, Name} from '../api';
+import { getAuth, Name } from "../api";
+
 function Home() {
   const [acces, setAcces] = useState("");
   const [loading, setLoading] = useState(true);
   const [userName, setUsername] = useState("");
   const [logo, setLogo] = useState("");
-  axios
-    .get(`${BackEnd_URL}/api/auth/`, { withCredentials: true })
+  getAuth
     .then((res) => {
       setAcces(res.data.msg);
       if (acces === "authorized") {

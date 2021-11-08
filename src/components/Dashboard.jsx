@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getGuilds, getAuth, BackEnd_URL, FrontEnd_URL } from "../api";
+import { getGuilds, getAuth, BackEnd_URL } from "../api";
 
 import ListGuild from "./comp/listGuilds";
 import Loading from "./comp/Loading";
