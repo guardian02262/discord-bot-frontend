@@ -5,8 +5,7 @@ export const FrontEnd_URL = 'http://guardian-discord-bot-frontend.herokuapp.com'
 export const Name = 'Vexer';
 
 export function getAuth() {
-    axios.defaults.headers.post['Content-Type'] ='application/json';
-    axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+    axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
     return axios.get(`${BackEnd_URL}/api/auth/`)
 }
 
