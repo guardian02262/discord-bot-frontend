@@ -7,7 +7,7 @@ export const Name = 'Vexer';
 export function getAuth() {
     axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
     // axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
-    return axios.get(`${BackEnd_URL}/api/auth/`, { withCredentials: true })
+    return axios.get(`${BackEnd_URL}/api/auth/`)
 }
 
 export function getGuilds() {
