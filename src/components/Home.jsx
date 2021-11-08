@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Loading from "./comp/Loading";
 import NavBar from "./comp/navBar";
@@ -9,8 +9,9 @@ function Home() {
   const [loading, setLoading] = useState(true);
   const [userName, setUsername] = useState("");
   const [logo, setLogo] = useState("");
-  getAuth
-    .then((res) => {
+
+  useEffect(() => {
+    getAuth().then((res) => {
       setAcces(res.data.msg);
       if (acces === "authorized") {
         setUsername(res.data.user.discordTag);
@@ -22,6 +23,7 @@ function Home() {
         setLoading(false);
       }, 2000)
     });
+  }, [acces]);
   return (
     <>
       {loading === true ? (
