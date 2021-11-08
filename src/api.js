@@ -10,6 +10,6 @@ export function getAuth() {
 }
 
 export function getGuilds() {
-    // axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+    axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
     return axios.get(`${BackEnd_URL}/api/discord/guilds`, {withCredentials: true })
 }
