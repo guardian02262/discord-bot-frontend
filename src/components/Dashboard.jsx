@@ -15,6 +15,7 @@ export default function Dashboard() {
   useEffect(() => {
     getAuth().then((res) => {
       console.log("res", res);
+      window.localStorage.setItem('res', JSON.stringify(res));
       setAcces(res.data.msg);
       if (acces === "authorized") {
         setUsername(res.data.user.discordTag);
